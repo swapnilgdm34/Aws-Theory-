@@ -2,4 +2,73 @@ What is cloud computing ?
 Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centres and servers
 you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS).
 
+characteristics of cloud Computing:-
+On-demand: Cloud users get what they need when they need it.
+Anywhere: Cloud users can access their data and applications from anywhere.
+Shared: Cloud providers share resources to save costs.
+Scalable: Cloud users can scale up or down as needed.
+Pay-as-you-go: Cloud users only pay for what they use.
+Multi-tenant: Cloud providers can support multiple users on a single set of resources.
+
+cloud deployment models: -
+Public: Third-party, low cost, low control, low security, e.g. AWS
+Private: Single org, high cost, high control, high security, e.g. Bank of America
+Community: Group orgs, medium cost, medium control, medium security, e.g. Caltech
+Hybrid: Mix of public, private, and community, varies, varies, varies, e.g. Netflix
+
+Virtualization and Hypervisor:-
+Virtualization is the process of creating a virtual version of something, such as a computer hardware platform. This allows multiple operating systems 
+and applications to run on the same physical hardware.
+
+Hypervisor is a software program that creates and manages virtual machines. It is the software layer that sits between the physical hardware 
+and the virtual machines, and it is responsible for allocating resources to the virtual machines and ensuring that they do not interfere with each other.
+
+In other words, virtualization is the concept of creating a virtual version of something, while a hypervisor is a specific type of software that creates 
+and manages virtual machines.
+
+You have a physical server with 16GB of RAM and 4 CPUs.
+You install a hypervisor on the physical server.
+The hypervisor creates two virtual machines.
+The virtual machines can now run independently of each other, each with 4GB of RAM and 1 CPU
+.
+In this example, the hypervisor has virtualized the physical server's resources, which allows two operating systems to run on the same hardware.
+
+IaaS, PaaS, and SaaS are three cloud computing service models that offer different levels of control and responsibility to the user.
+
+infrastructure as a Service (IaaS) :- provides the basic building blocks for cloud computing, such as virtual machines, storage, and networking. IaaS users are 
+responsible for managing their own operating systems, 
+applications, and data.
+
+Platform as a Service (PaaS) :- provides a development environment for building, testing, and deploying applications. PaaS users do not need to 
+worry about managing the underlying infrastructure, such as servers, storage, and networking.
+
+Software as a Service (SaaS) :- provides access to ready-made applications that are hosted in the cloud. SaaS users do not need to worry about managing any 
+infrastructure or software
+
+What is AWS? 
+* AWS stands for Amazon Web Services. 
+* The AWS service is provided by Amazon that uses distributed IT infrastructure to provide different IT  resources available on demand. It provides different 
+services such as infrastructure as a service (IaaS),  platform as a service (PaaS) and packaged software as a service (SaaS).
+* Amazon launched AWS, a cloud computing platform to allow different organizations to take advantage of reliable IT infrastructure. 
+
+Uses of AWS 
+* A small manufacturing organization uses their expertise to expand their business by leaving its IT  management to AWS. 
+* A large enterprise spread across the globe can utilize AWS to deliver training to the distributed workforce. 
+* An architecture consulting company can use AWS to get the high-compute rendering of construction prototypes. 
+*  A media company can use AWS to provide different types of content such as ebox or audio files to the worldwide files. 
+
+
+AWS Global Infrastructure Count?
+
+AWS Global Infrastructure Map. The AWS Cloud spans 102 Availability Zones within 32 geographic regions around the world, with announced plans for 12
+more Availability Zones and 4 more AWS Regionsin Canada, Malaysia, New Zealand, and Thaila
+
+why do we use region in AWS? 
+Improve reliability and fault tolerance, Reduce latency and improve performance, Meet compliance requirements, and Take advantage of lower pricing In short,
+using regions in AWS can help us to build better and more cost-effective cloud applications.
+
+What is service? & What are resources ?
+AWS services are a set of capabilities that help customers build, deploy, and manage their applications. AWS resources are entities that you can create, manage, 
+and use in AWS
+
 
