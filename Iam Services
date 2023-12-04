@@ -1,1 +1,164 @@
+IAM - Identity and Access Management
 
+AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. With IAM, you can centrally manage permissions 
+that control which AWS resources users can access. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+
+What is AWS IAM?
+AWS IAM (Identity and Access Management) is a service that helps you securely control access to AWS resources. With IAM, you can create and manage users, groups, 
+and roles, and you can define permissions for each resource in your AWS account.
+
+How many resources do we have in IAM
+Users: Individual or application identities.
+Groups: Collections of users for easy permission management.
+Roles: Permissions for services, apps, or EC2 instances. 
+Policies: Define permissions for users, groups, and roles. 
+Access Keys: Used for programmatic access. 
+MFA Devices: Enhance security with multi-factor authentication. 
+Service-specific resources: Control access to various AWS services.
+
+Deployment model in IAM?
+IAM in AWS follows a centralized deployment model. Access control, policies, and permissions are managed at the AWS account level,
+ensuring uniformity and control. Cross-account access is possible via IAM roles, and IAM integrates with various AWS services for fine-grained access control.
+
+Identities in IAM ?
+Identities in IAM (Identity and Access Management) represent entities that interact with AWS services and resources. These identities include
+Users: Individual people or applications with AWS accounts. 
+Groups: Collections of users for simplified permission management. 
+Roles: Permissions for AWS services, applications, or resources. 
+Federated Identities: Access for users authenticated through external identity providers like SAML or OpenID Connect. 
+Resource-based Policies: Permissions attached to resources, specifying who can access them. 
+These identities help define and manage access permissions within your AWS environment.
+
+IAM Resources
+IAM resources are the objects that you can create and manage in IAM. These resources include:
+
+What is an IAM User ?
+An IAM user in AWS is an identity representing an individual or application within an AWS account, with specific permissions for accessing AWS resources.
+
+To create an IAM user:
+Open the AWS Management Console and sign in to your AWS account.
+In the navigation pane, choose IAM.
+In the navigation pane, choose Users, and then choose Add Users.
+On the Specify user details page, enter the user name and other required information.
+(Optional) Choose Assign user to group to add the user to a group.
+(Optional) Choose Provide user access to the AWS Management Console optional to give the user access to the AWS Management Console.
+Choose Next: Permissions.
+On the Set Permissions page, select the permissions that you want to grant to the user.
+Choose Next: Review.
+On the Review page, review the user details and permissions.
+Choose Create user.
+
+What is the IAM Group?
+An IAM group is an identity that specifies a collection of IAM users. You can't use a group to sign in. You can use groups to 
+specify permissions for multiple users at a time. 
+Groups make permissions easier to manage for large sets of users. For example, you could have a group named IAMPublishers 
+and give that group the types of permissions that publishing workloads typically need.
+
+To create an IAM group:
+Open the AWS Management Console and sign in to your AWS account.
+In the navigation pane, choose IAM.
+In the navigation pane, choose Groups, and then choose Create group.
+Enter a group name and optional description.
+Choose Next: Permissions.
+On the Set Permissions page, select the permissions that you want to grant to the group.
+Choose Next: Review.
+On the Review page, review the group details and permissions.
+Choose Create group.
+
+What is the IAM Role?
+An IAM role is a set of permissions and policies that determine what actions and resources are accessible to AWS services, users, or applications. 
+Unlike users, roles are not associated with specific individuals but can be assumed by authorized entities to temporarily gain specific permissions.
+Roles are commonly used for services like EC2 instances or Lambda functions that need access to other AWS resources
+without using permanent credentials.
+
+To create an IAM role:
+Open the AWS Management Console and sign in to your AWS account.
+In the navigation pane, choose IAM.
+In the navigation pane, choose Roles, and then choose Create role.
+Choose the Select trusted entity type.
+Choose the role type.
+Choose the permissions for the role.
+Choose Next: Review.
+Review the role details and permissions.
+Choose Create role.
+
+What is the IAM Policy?
+An IAM policy is a set of rules that define what actions are allowed or denied on AWS resources. It specifies who has access to what resources
+and what they can do with those resources within an AWS account. Policies are used to control and manage permissions for IAM users, groups, 
+and roles in a cloud environment
+
+To create an IAM policy:
+Open the AWS Management Console and sign in to your AWS account.
+In the navigation pane, choose IAM.
+In the navigation pane, choose Policies, and then choose Create Policy.
+Choose the Select policy type.
+Enter a policy name and optional description.
+In the Policy editor, enter the JSON code for the policy.
+Choose Review policy.
+Review the policy and then choose Create policy.
+
+Where do we attach Identity Based Policy ?
+
+Identity-based policies are attached at the user, group, or role level in AWS Identity and Access Management (IAM). You can associate these policies with:
+IAM Users: You can attach identity-based policies directly to individual IAM users, granting them specific permissions. 
+IAM Groups: Identity-based policies can also be attached to IAM groups, allowing all users within that group to inherit the associated permissions.
+IAM Roles: For AWS services, applications, or temporary access needs, identity-based policies can be attached to IAM roles. Users or services can assume these 
+roles to gain specific permissions when necessary. 
+By attaching identity-based policies at these levels, you control who has access to what resources and what actions they can perform within your AWS account.
+
+To attach a policy to an IAM user, group, or role:
+Open the AWS Management Console and sign in to your AWS account.
+In the navigation pane, choose IAM.
+In the navigation pane, choose the type of IAM resource that you want to attach the policy to.
+Select the IAM resource.
+Choose the Attach Policy tab.
+Select the policy that you want to attach.
+Choose Attach policy.
+Conclusion
+IAM is a powerful tool that can help you securely control access to your AWS resources. By understanding the different IAM resources 
+and how to create and manage them, you can ensure that your AWS account is secure and that your users have the permissions they need to do their jobs.
+
+Where do we attach Resource Based Policy ?
+
+Resource-based policies are attached directly to AWS resources (like S3 buckets or Lambda functions) to control who can access them 
+and what actions they can perform. You set these policies using the AWS Management Console, AWS CLI, or SDKs for the specific AWS service
+
+Can we be able to create Policy via json code ?
+Yes, we can create policies in AWS using JSON code. JSON is used to define permissions in IAM policies and resource-based policies for AWS services
+
+If one user has created it by default, which permission has been assigned to that user ?
+By default, when you create an IAM user in AWS, they have no permissions assigned. You need to explicitly grant permissions to that user by attaching IAM policies.
+
+What is dominator policy ?
+A policy is an object in AWS that, when associated with an identity or resource, defines their permissions. 
+
+What is ARN ? What are the fields in ARN ?
+An ARN, or Amazon Resource Name, is a globally unique identifier for resources within Amazon Web Services (AWS). It's used to specify and access AWS resources across various AWS services. 
+ARNs have a specific format and consist of several components
+1. Arn : This is a fixed part of the ARN and stands for "Amazon Resource Name.
+2.aws : This component indicates that the resource is within AWS. 
+3.service : This is the AWS service that the resource belongs to, such as "s3" for Amazon S3, "lambda" for AWS Lambda, "iam" for AWS Identity 
+and Access Management, and so on. 
+4.region : This component specifies the AWS region where the resource is located. It's optional, and if not included, it implies a global or 
+region-agnostic resource. 
+5.account : This part represents the AWS account ID that owns the resource.
+6. Resource : The resource-specific part of the ARN that uniquely identifies the particular resource within the service. This can vary significantly 
+depending on the service and the resource type.
+
+Here's an example of a complete ARN:
+arn:aws:s3:::my-bucket/my-object
+arn is the fixed part of the ARN. 
+aws specifies that the resource is within AWS. 
+s3 indicates that the resource belongs to Amazon S3.
+ us-east-1 (if included) would specify the AWS region (e.g., US East 1). 
+123456789012 is the AWS account ID
+. my-bucket/my-object is the resource-specific part that identifies a specific object within the S3 bucket.
+The specific format and components of an ARN can vary depending on the AWS service and resource type it represents.
+
+How many types of ARN Partition ?
+
+The following are the supported partitions: aws - AWS Regions. aws-cn - China Regions. aws-us-gov - AWS GovCloud (US) Regions.
+
+What are Tags ?
+In AWS, "tags" are labels you can attach to resources with key-value pairs to help you organize, track costs, control access, and automate actions for
+those resources. For example, you can tag resources as "Environment: Production" or "Department: Finance" to categorize and manage them easily.
