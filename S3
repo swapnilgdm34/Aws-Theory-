@@ -1,0 +1,18 @@
+Difference between Block storage & Object Storage ?
+
+Block storage and object storage are two different types of storage systems in computing, each with its own characteristics and use cases. Here are the key differences between them:
+Block Storage:
+Granularity: Block storage divides data into fixed-sized blocks, typically in the form of chunks or blocks, each with a specific address. 
+Use Cases: It is well-suited for scenarios where data needs to be accessed and modified frequently, such as databases, virtual machines, and file systems.
+ Access: Block storage is attached to a single server or instance, making it accessible only to that server. It appears as a traditional hard drive or storage device to the server. 
+Performance: Block storage systems typically offer low-latency and high I/O performance, making them suitable for applications that require fast, direct access to data. 
+Scalability: Scaling block storage can be more complex, often requiring manual adjustments or the addition of more storage volumes.
+ Examples: AWS EBS (Elastic Block Store), local hard drives, SAN (Storage Area Network).
+
+Object Storage:
+Granularity: Object storage stores data as objects, each containing the data, metadata, and a unique identifier.
+ Use Cases: It is ideal for storing and managing large amounts of unstructured data, such as images, videos, backups, and archives, where data is rarely modified. 
+Access: Object storage is accessible over the internet using HTTP/HTTPS and is designed for distributed access from multiple locations and devices
+.Performance: Object storage systems are optimized for durability and scalability rather than low-latency access. They are well-suited for data that is primarily read and not frequently updated.
+Scalability: Object storage is highly scalable, and you can easily add or remove objects without manual adjustments or downtime. 
+Examples: AWS S3 (Simple Storage Service), Azure Blob Storage, Google Cloud Storage.
